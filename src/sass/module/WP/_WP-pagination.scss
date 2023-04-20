@@ -1,0 +1,134 @@
+@use 'global' as *;
+
+.pagination .nav-links {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	@include mq('md') {
+		justify-content: center;
+	}
+}
+.WP-single-paginationWrapper .nav-links {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	@include mq('md') {
+		flex-direction: row;
+	}
+}
+.pagination .nav-links .page-numbers.prev,
+.pagination .nav-links .page-numbers.next {
+	display: none;
+	@include mq('md') {
+		display: flex;
+	}
+}
+
+.pagination .nav-links .page-numbers {
+	font-size: rem(16);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	text-align: center;
+	color: #1a1a1a;
+	border: solid 2px #000;
+	cursor: pointer;
+	margin-right: rem(6);
+	width: rem(36);
+	height: rem(36);
+	@media (min-width: 374px) {
+		width: rem(40);
+		height: rem(40);
+	}
+	@include mq('md') {
+		font-size: rem(18);
+		margin-right: rem(20);
+		border: solid 3px #000;
+		width: rem(60);
+		height: rem(60);
+	}
+}
+.pagination .nav-links .page-numbers.current {
+	background: #000;
+	color: #fff;
+}
+
+.WP-single-paginationWrapper .nav-previous,
+.WP-single-paginationWrapper .nav-next {
+	display: inline-block;
+	max-width: rem(302);
+	width: 100%;
+	margin: rem(10) 0;
+	@include mq('md') {
+		margin: 0 rem(15);
+	}
+}
+.WP-single-paginationWrapper .nav-previous a,
+.WP-single-paginationWrapper .nav-next a {
+	max-width: rem(302);
+	width: 100%;
+	font-size: rem(18);
+	font-weight: bold;
+	line-height: 1.18;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #1a1a1a;
+	border: solid 3px #000;
+	cursor: pointer;
+	position: relative;
+	// margin-inline: auto;
+	background: #fff;
+	letter-spacing: 0.15em;
+	@include mq('md') {
+		max-width: rem(302);
+	}
+}
+.WP-single-paginationWrapper .nav-previous a::before,
+.WP-single-paginationWrapper .nav-next a::before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: rem(60);
+	@include mq('md') {
+	}
+}
+.WP-single-paginationWrapper .nav-previous a::after {
+	position: absolute;
+	content: '';
+	top: 40%;
+	transform: translateY(-50%);
+	left: rem(75);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(3) solid #1a1a1a;
+	border-right: rem(3) solid #1a1a1a;
+	transform: rotate(-135deg);
+	transition: all 0.5s;
+	@include mq('md') {
+	}
+}
+.WP-single-paginationWrapper .nav-next a::after {
+	position: absolute;
+	content: '';
+	top: 40%;
+	transform: translateY(-50%);
+	right: rem(75);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(3) solid #1a1a1a;
+	border-right: rem(3) solid #1a1a1a;
+	transform: rotate(45deg);
+	transition: all 0.5s;
+	@include mq('md') {
+	}
+}
+.WP-single-paginationWrapper .nav-previous a:hover::after {
+	animation: slideOutX2 0.75s ease;
+}
+.WP-single-paginationWrapper .nav-next a:hover::after {
+	animation: slideOutX 0.75s ease;
+}

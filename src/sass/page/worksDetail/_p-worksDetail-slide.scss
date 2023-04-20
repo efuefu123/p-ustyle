@@ -1,0 +1,135 @@
+@use 'global' as *;
+
+// main
+.p-worksDetail-slide__main {
+	max-width: rem(315);
+	width: 100%;
+	@include mq('md') {
+		max-width: rem(900);
+	}
+}
+// .p-worksDetail-slide__mainContainer {
+// }
+.p-worksDetail-slide__mainSlide {
+	max-width: rem(315);
+	width: 100%;
+	position: relative;
+	@include mq('md') {
+		max-width: rem(900);
+	}
+}
+.p-worksDetail-slide__mainSlide::before {
+	content: '';
+	display: block;
+	padding-top: 66.6667%;
+}
+.p-worksDetail-slide__mainSlideImg {
+	max-width: rem(315);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	object-fit: cover;
+	@include mq('md') {
+		max-width: rem(900);
+	}
+}
+// thumb
+.p-worksDetail-slide__thumbWrapper {
+	max-width: rem(315);
+	width: 100%;
+	position: relative;
+	margin-top: rem(15);
+	margin-inline: auto;
+	padding: 0 rem(17) 0 rem(22);
+	@include mq('md') {
+		max-width: rem(900);
+		margin-top: rem(42);
+		margin-inline: 0;
+		padding: 0 rem(50) 0 rem(62);
+	}
+}
+.p-worksDetail-slide__thumb {
+	max-width: rem(315);
+	width: 100%;
+	@include mq('md') {
+		max-width: rem(900);
+	}
+}
+.p-worksDetail-slide__thumbContainer {
+	@include mq('md') {
+	}
+}
+.p-worksDetail-slide__thumbSlide {
+	max-width: rem(37);
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+	@include mq('md') {
+		max-width: rem(105);
+	}
+}
+.p-worksDetail-slide__thumbSlide::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+.p-worksDetail-slide__thumbSlideImg {
+	max-width: rem(37);
+	// height: rem(37);
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	object-fit: cover;
+	@include mq('md') {
+		max-width: rem(105);
+		// height: rem(105);
+	}
+}
+
+.p-worksDetail-slide__thumb-prevBtn {
+	position: absolute;
+	top: 38%;
+	transform: translateY(-50%);
+	left: rem(2);
+	width: rem(12);
+	height: rem(12);
+	border-top: rem(2) solid #1a1a1a;
+	border-right: rem(2) solid #1a1a1a;
+	transform: rotate(-135deg);
+	cursor: pointer;
+	@include mq('md') {
+		left: rem(8);
+		width: rem(21);
+		height: rem(21);
+		border-top: rem(4) solid #1a1a1a;
+		border-right: rem(4) solid #1a1a1a;
+	}
+}
+.p-worksDetail-slide__thumb-nextBtn {
+	position: absolute;
+	top: 38%;
+	transform: translateY(-50%);
+	right: rem(2);
+	width: rem(12);
+	height: rem(12);
+	border-top: rem(2) solid #1a1a1a;
+	border-right: rem(2) solid #1a1a1a;
+	transform: rotate(45deg);
+	cursor: pointer;
+	@include mq('md') {
+		right: rem(8);
+		width: rem(21);
+		height: rem(21);
+		border-top: rem(4) solid #1a1a1a;
+		border-right: rem(4) solid #1a1a1a;
+	}
+}

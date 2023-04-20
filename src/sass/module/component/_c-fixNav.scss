@@ -1,0 +1,86 @@
+@use 'global' as *;
+
+.c-fixNav {
+	position: fixed;
+	bottom: rem(10);
+	right: 0;
+	width: rem(140);
+	height: rem(70);
+	z-index: 500;
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	justify-items: center;
+	align-items: center;
+	@include mq('md') {
+		display: block;
+		top: rem(238);
+		bottom: auto;
+		width: rem(100);
+		height: rem(200);
+	}
+}
+.c-fixNav__item {
+	display: block;
+	width: rem(70);
+	height: rem(70);
+	padding: rem(4) 0 rem(4);
+	@include mq('md') {
+		width: rem(100);
+		height: rem(100);
+		padding: rem(8) 0 rem(4);
+	}
+}
+.c-fixNav__item-img-wrapper {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	height: rem(45);
+	@include mq('md') {
+		height: rem(64);
+	}
+}
+.c-fixNav__item-img {
+	display: block;
+	margin-inline: auto;
+}
+.c-fixNav__item-title {
+	font-size: rem(10);
+	font-weight: bold;
+	line-height: 1.25;
+	text-align: center;
+	@include mq('md') {
+		font-size: rem(14);
+	}
+}
+// 個別
+.c-fixNav--top {
+	bottom: rem(60);
+	@include mq('md') {
+		top: rem(238);
+		bottom: auto;
+	}
+}
+.c-fixNav__item:nth-of-type(1) {
+	background: #1b1464;
+}
+.c-fixNav__item:nth-of-type(1) .c-fixNav__item-title {
+	color: #fff;
+}
+.c-fixNav__item:nth-of-type(1) .c-fixNav__item-img {
+	width: rem(26);
+	@include mq('md') {
+		width: rem(37);
+	}
+}
+.c-fixNav__item:nth-of-type(2) {
+	background: #ebdd21;
+}
+.c-fixNav__item:nth-of-type(2) .c-fixNav__item-title {
+	color: #1b1464;
+}
+.c-fixNav__item:nth-of-type(2) .c-fixNav__item-img {
+	width: rem(32);
+	@include mq('md') {
+		width: rem(37);
+	}
+}

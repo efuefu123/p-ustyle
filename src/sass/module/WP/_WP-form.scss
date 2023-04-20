@@ -1,0 +1,63 @@
+@use 'global' as *;
+
+// itemData11-1
+.itemData09 input[type='radio'],
+.itemData11-1 input[type='radio'] {
+	display: none;
+}
+.itemData09 label,
+.itemData11-1 label {
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: middle;
+	line-height: 2.62;
+	width: 100%;
+	padding-left: rem(26);
+	@include mq('md') {
+		margin-right: rem(20);
+		line-height: 2.5;
+		width: auto;
+		padding-left: rem(26);
+	}
+}
+.itemData09 .mwform-radio-field-text,
+.itemData11-1 .mwform-radio-field-text {
+	display: inline-block;
+	position: relative;
+	@include mq('md') {
+	}
+}
+.itemData09 .mwform-radio-field-text::after,
+.itemData09 .mwform-radio-field-text::before,
+.itemData11-1 .mwform-radio-field-text::after,
+.itemData11-1 .mwform-radio-field-text::before {
+	border-radius: 50%;
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.itemData09 .mwform-radio-field-text::before,
+.itemData11-1 .mwform-radio-field-text::before {
+	width: rem(20);
+	height: rem(20);
+	left: rem(-26);
+	background: #c8c8c8;
+}
+.itemData09 .mwform-radio-field-text::after,
+.itemData11-1 .mwform-radio-field-text::after {
+	width: rem(12);
+	height: rem(12);
+	left: rem(-22);
+	background: #808080;
+	opacity: 0;
+}
+.itemData09 input[type='radio']:checked + .mwform-radio-field-text::after,
+.itemData11-1 input[type='radio']:checked + .mwform-radio-field-text::after {
+	opacity: 1;
+}
+// reset
+.mw_wp_form .horizontal-item + .horizontal-item {
+	margin-left: 0;
+}

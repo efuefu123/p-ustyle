@@ -1,0 +1,112 @@
+@use 'global' as *;
+.p-modelHouseDetail {
+	padding-top: rem(52);
+	@include mq('md') {
+		padding-top: rem(86);
+	}
+}
+.p-modelHouseDetail__content {
+	margin-top: rem(41);
+	@include mq('md') {
+		margin-top: rem(112);
+	}
+}
+.p-modelHouseDetail__content p {
+	line-height: 2;
+}
+.p-modelHouseDetail__title {
+	text-align: center;
+	margin-inline: auto;
+	width: fit-content;
+	@include mq('md') {
+	}
+}
+.p-modelHouseDetail__sub {
+	font-size: rem(16);
+	font-weight: 300;
+	color: #4d4d4d;
+	letter-spacing: 0.2em;
+	@include mq('md') {
+	}
+}
+.p-modelHouseDetail__main {
+	font-size: rem(32);
+	font-weight: bold;
+	color: #1a1a1a;
+	letter-spacing: 0.25em;
+	margin-top: rem(3);
+	@include mq('md') {
+		margin-top: rem(10);
+	}
+}
+.p-modelHouseDetail__media {
+	font-size: rem(16);
+	color: #1a1a1a;
+	line-height: 2;
+	margin-top: rem(43);
+	width: fit-content;
+	margin-inline: auto;
+	justify-content: center;
+	@include mq('md') {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0px rem(59);
+		padding-bottom: rem(55);
+	}
+}
+.p-modelHouseDetail__description {
+	max-width: rem(315);
+	width: 100%;
+	@include mq('md') {
+		max-width: rem(471);
+	}
+}
+.p-modelHouseDetail__body {
+	max-width: rem(315);
+	width: 100%;
+	@include mq('md') {
+		max-width: rem(489);
+	}
+}
+// .p-modelHouseDetail__list {
+// }
+.p-modelHouseDetail__item {
+	line-height: 3.2;
+	@include mq('md') {
+		line-height: 2;
+	}
+}
+.p-modelHouseDetail__btnWrapper {
+	text-align: center;
+	margin-top: rem(60);
+	@include mq('md') {
+	}
+}
+a.p-modelHouseDetail__btn {
+	background: #ebdd21;
+	border: none;
+	@include mq('md') {
+	}
+}
+a.p-modelHouseDetail__btn::after {
+	right: rem(48);
+}
+.p-modelHouseDetail__img {
+	max-width: rem(315);
+	width: 100%;
+	margin-top: rem(30);
+	margin-inline: auto;
+	max-height: 70vh;
+	@include mq('md') {
+		width: auto;
+		max-width: rem(1200);
+		margin-top: rem(70);
+		margin-inline: 0;
+	}
+}
+.p-modelHouseDetail__img:nth-of-type(1) {
+	margin-top: rem(60);
+	@include mq('md') {
+		margin-top: rem(120);
+	}
+}

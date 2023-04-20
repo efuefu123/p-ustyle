@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+.p-top-belt {
+	background: #1b1464;
+	padding: rem(12) 0 rem(20);
+	@include mq('md') {
+		padding: rem(16) 0;
+	}
+}
+.p-top-belt__container {
+	font-family: $second-font-family;
+	line-height: 1.75;
+	text-align: center;
+	letter-spacing: 0.2em;
+	color: #fff;
+	@include mq('md') {
+		letter-spacing: 0.15em;
+	}
+}
+.p-top-belt__mainText {
+	font-size: rem(38);
+	@include mq('md') {
+	}
+}
+.p-top-belt__subText {
+	font-size: rem(12);
+	@include mq('md') {
+	}
+}

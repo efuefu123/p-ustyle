@@ -1,0 +1,47 @@
+@use 'global' as *;
+
+.c-topTitle {
+	text-align: center;
+	width: fit-content;
+	margin-inline: auto;
+	position: relative;
+	@include mq('md') {
+	}
+}
+.c-topTitle::before {
+	position: absolute;
+	content: '';
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: rem(-28);
+	width: rem(50);
+	height: rem(4);
+	background: #bbb;
+	@include mq('md') {
+		height: rem(6);
+		bottom: rem(-25);
+	}
+}
+.c-topTitle__main {
+	font-family: $second-font-family;
+	font-size: rem(40);
+	line-height: 1.45;
+	letter-spacing: 0.1em;
+	color: #1a1a1a;
+	@include mq('md') {
+		font-size: rem(48);
+		line-height: 1.21;
+	}
+}
+.c-topTitle__sub {
+	font-size: rem(17);
+	font-weight: bold;
+	line-height: 1.75;
+	letter-spacing: 0.2em;
+	color: #231815;
+	margin-top: rem(4);
+	@include mq('md') {
+		margin-top: rem(12);
+		letter-spacing: 0.15em;
+	}
+}

@@ -1,0 +1,138 @@
+@use 'global' as *;
+
+.l-access {
+	background: #fff;
+	padding-top: rem(64);
+	@include mq('md') {
+		padding-top: rem(120);
+	}
+}
+.l-access__container {
+	margin-inline: auto;
+	max-width: rem(520);
+	width: 100%;
+	height: inherit;
+	margin-inline: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	@include mq('md') {
+		max-width: rem(1440);
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.l-access .l-access__title {
+	text-align: left;
+	width: auto;
+}
+.l-access__title::before {
+	display: none;
+}
+// .l-access__content {
+// }
+.l-access__media {
+	max-width: rem(315);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-inline: auto;
+	@include mq('md') {
+		max-width: none;
+		align-items: start;
+		display: grid;
+		grid-template-columns: rem(500) rem(850);
+		grid-gap: 0px rem(36);
+		justify-items: center;
+		padding-left: rem(68);
+		margin-inline: 0;
+	}
+}
+.l-access__body {
+	// max-width: rem(315);
+	// order: 1;
+	// padding-top: rem(45);
+	display: contents;
+	@include mq('md') {
+		display: block;
+		// order: 0;
+		max-width: rem(396);
+		width: 100%;
+		padding-top: rem(28);
+	}
+}
+.l-access__info {
+	font-size: rem(16);
+	line-height: 2;
+	color: #1a1a1a;
+	margin-top: rem(50);
+	@include mq('md') {
+		letter-spacing: 0.01em;
+		margin-top: rem(62);
+	}
+}
+.l-access__info-company {
+	font-weight: bold;
+}
+.l-access__info-address {
+	font-weight: bold;
+	margin-top: rem(27);
+	@include mq('md') {
+		margin-top: rem(34);
+	}
+}
+// .l-access__info-fax {
+// }
+.l-access__info-tel-wrapper {
+	color: #1a1a1a;
+	margin-top: rem(14);
+	order: 2;
+	@include mq('md') {
+		order: 0;
+		margin-top: rem(28);
+	}
+}
+.l-access__info-tel {
+	font-family: 'Bebas Neue';
+	font-size: rem(48);
+	letter-spacing: 0.075em;
+	@include mq('md') {
+		font-size: rem(64);
+	}
+}
+.l-access__info-time {
+	font-size: rem(16);
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: 0.2em;
+	@include mq('md') {
+		line-height: 1;
+		letter-spacing: 0.12em;
+	}
+}
+
+.l-access__map-wrapper {
+	// max-width: rem(315);
+	// height: rem(259);
+	display: contents;
+	@include mq('md') {
+		display: block;
+		max-width: rem(820);
+		width: 100%;
+		height: rem(567);
+	}
+}
+.l-access__map {
+	max-width: rem(315);
+	width: 100%;
+	height: rem(259);
+	order: 1;
+	margin-top: rem(35);
+	@include mq('md') {
+		max-width: rem(820);
+		height: 100%;
+		// height: rem(567);
+		order: 0;
+		margin-top: 0;
+	}
+}

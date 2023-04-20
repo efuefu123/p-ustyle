@@ -1,0 +1,10 @@
+@use 'global' as *;
+
+.p-modelHouse {
+	padding-top: rem(52);
+	@include mq('md') {
+		padding-top: rem(86);
+	}
+}
+// .p-modelHouse__list {
+// }

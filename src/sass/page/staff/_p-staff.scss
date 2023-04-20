@@ -1,0 +1,199 @@
+@use 'global' as *;
+
+.p-staff {
+	padding-top: rem(52);
+	@include mq('md') {
+		padding-top: rem(86);
+	}
+}
+.p-staff__content {
+	margin-top: rem(47);
+	@include mq('md') {
+		margin-top: rem(22);
+	}
+}
+.p-staff__cards {
+	position: relative;
+	z-index: 10;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	justify-content: center;
+	@include mq('md') {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, auto);
+		grid-gap: 0px rem(30);
+		align-items: stretch;
+	}
+}
+.p-staff__card {
+	display: block;
+	max-width: rem(315);
+	width: 100%;
+	cursor: pointer;
+	margin-inline: auto;
+	margin-top: rem(57);
+	@include mq('md') {
+		max-width: rem(380);
+		margin-inline: 0;
+		margin-top: rem(86);
+	}
+}
+.p-staff__cardImgWrapper {
+	max-width: rem(315);
+	width: 100%;
+	position: relative;
+	background: #d5d5d5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include mq('md') {
+		max-width: rem(380);
+	}
+}
+.p-staff__cardImgWrapper::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+.p-staff__cardImg {
+	max-width: rem(315);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	object-fit: cover;
+	@include mq('md') {
+		max-width: rem(380);
+	}
+}
+/* 画像がないときのロゴのみサムネイル from */
+.p-staff__cardImgWrapperNone {
+	position: static;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: rem(315);
+	width: 100%;
+	background: #d5d5d5;
+	padding: rem(22) rem(34);
+	@include mq('md') {
+		max-width: rem(380);
+		padding: rem(51) rem(77);
+	}
+}
+.p-staff__cardImgWrapperNone::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+.p-staff__cardImgNone {
+	position: static;
+	max-width: rem(225);
+	width: 100%;
+	height: 100%;
+}
+/* 画像がないときのロゴのみサムネイル to */
+.p-staff__cardMainTitle {
+	font-size: rem(26);
+	font-weight: bold;
+	color: #1a1a1a;
+	letter-spacing: 0.25em;
+	margin-top: rem(22);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	@include mq('md') {
+		margin-top: rem(26);
+	}
+}
+.p-staff__cardSubTitle {
+	font-size: rem(16);
+	color: #4d4d4d;
+	letter-spacing: 0.2em;
+	margin-top: rem(3);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	@include mq('md') {
+		margin-top: rem(10);
+	}
+}
+.p-staff__paginationWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	margin-top: rem(118);
+	@include mq('md') {
+		justify-content: center;
+	}
+}
+.p-staff__pagination {
+	font-size: rem(18);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	text-align: center;
+	color: #1a1a1a;
+	border: solid 3px #000;
+	cursor: pointer;
+	margin-right: rem(20);
+	width: rem(60);
+	height: rem(60);
+	@include mq('md') {
+	}
+}
+.p-staff__overLay {
+	background: #707070;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	cursor: pointer;
+	@include mq('md') {
+		padding-top: rem(244);
+	}
+}
+.p-staff__overLay.is-active {
+	opacity: 1;
+	visibility: visible;
+}
+.p-staff__overLayTitle {
+	width: fit-content;
+	margin-inline: auto;
+	text-align: center;
+	@include mq('md') {
+	}
+}
+.p-staff__overLayMainTitle {
+	font-family: $second-font-family;
+	font-size: rem(40);
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+	color: #1a1a1a;
+	@include mq('md') {
+		font-size: rem(48);
+		line-height: 1.21;
+	}
+}
+.p-staff__overLaySubTitle {
+	font-size: rem(20);
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: 0.2em;
+	color: #231815;
+	margin-top: rem(4);
+	@include mq('md') {
+		margin-top: rem(22);
+		letter-spacing: 0.15em;
+	}
+}

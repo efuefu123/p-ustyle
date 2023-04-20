@@ -1,0 +1,76 @@
+@use 'global' as *;
+
+.p-contactCheck {
+	padding-top: rem(19);
+	@include mq('md') {
+		padding-top: rem(72);
+	}
+}
+.p-contactCheck__content {
+	width: 100%;
+	margin: rem(61) auto 0;
+	@include mq('md') {
+		max-width: rem(818);
+	}
+}
+.p-contactCheck__item {
+	width: 100%;
+	letter-spacing: 0.15em;
+	@include mq('md') {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}
+.p-contactCheck__item:nth-of-type(n + 2) {
+	margin-top: rem(37);
+	@include mq('md') {
+		margin-top: rem(20);
+	}
+}
+.p-contactCheck__itemName {
+	width: 100%;
+	font-size: rem(16);
+	font-weight: bold;
+	color: #fff;
+	background: #808080;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: rem(11) 0 rem(15);
+	@include mq('md') {
+		max-width: rem(229);
+	}
+}
+.p-contactCheck__itemData {
+	width: 100%;
+	padding: rem(6) rem(19);
+	@include mq('md') {
+	}
+}
+.p-contactCheck__itemData-text {
+	font-size: rem(16);
+	text-align: left;
+	color: #1a1a1a;
+	@include mq('md') {
+	}
+}
+.p-contactCheck__privacypolicyWrapper {
+	margin-top: rem(64);
+	@include mq('md') {
+		margin-top: rem(40);
+	}
+}
+.p-contactCheck__privacypolicyWrapper .p-contactCheck__itemData-text {
+	@include mq('md') {
+		text-align: center;
+	}
+}
+.p-contactCheck__btnWrapper {
+	margin-top: rem(48);
+	@include mq('md') {
+		margin-top: rem(51);
+	}
+}

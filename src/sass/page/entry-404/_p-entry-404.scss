@@ -1,0 +1,30 @@
+@use 'global' as *;
+
+// .p-entry-404 {
+// }
+.p-entry-404__inner {
+	padding: 10% 0;
+	max-width: rem(520);
+	margin: 0 auto;
+	text-align: center;
+	@include mq('md') {
+		max-width: rem(1400);
+	}
+}
+.p-entry-404__head {
+	font-size: rem(32);
+	color: #1b1464;
+	font-weight: 700;
+	@include mq('md') {
+		font-size: rem(48);
+	}
+}
+.p-entry-404__lead,
+.p-entry-404__content {
+	font-size: rem(16);
+	margin-top: 3%;
+	font-weight: 600;
+	@include mq('md') {
+		font-size: rem(24);
+	}
+}

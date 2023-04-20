@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.c-lowerTitle {
+	width: fit-content;
+	margin-inline: auto;
+	text-align: center;
+	@include mq('md') {
+	}
+}
+.c-lowerTitle__main {
+	font-family: $second-font-family;
+	font-size: rem(40);
+	line-height: 1.45;
+	letter-spacing: 0.05em;
+	color: #1a1a1a;
+	@include mq('md') {
+		font-size: rem(48);
+		line-height: 1.21;
+	}
+}
+.c-lowerTitle__sub {
+	font-size: rem(17);
+	font-weight: bold;
+	line-height: 1.75;
+	letter-spacing: 0.2em;
+	color: #231815;
+	margin-top: rem(4);
+	@include mq('md') {
+		margin-top: rem(22);
+		letter-spacing: 0.15em;
+	}
+}

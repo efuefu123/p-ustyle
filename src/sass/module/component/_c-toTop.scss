@@ -1,0 +1,35 @@
+@use 'global' as *;
+
+.c-toTop {
+	position: fixed;
+	z-index: -10; // ロード時の表示防止
+	right: 0;
+	bottom: rem(85);
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	background: url(../images/common/cmn_icon-toTop.png) no-repeat center center / contain;
+	width: rem(50);
+	height: rem(50);
+	opacity: 0;
+	visibility: hidden;
+	transition: animation 0.2s;
+	animation: fadedown 0.2s;
+	@include mq('md') {
+		bottom: rem(50);
+		width: rem(80);
+		height: rem(80);
+	}
+}
+.c-toTop.is-active {
+	z-index: 500;
+	opacity: 1;
+	visibility: visible;
+	animation: fadeup 0.2s;
+}
+.c-toTop--top {
+	bottom: rem(135);
+	@include mq('md') {
+		bottom: rem(80);
+	}
+}

@@ -1,0 +1,48 @@
+@use 'global' as *;
+
+.p-contactThanks {
+	padding-top: rem(19);
+	@include mq('md') {
+		padding-top: rem(72);
+	}
+}
+.p-contactThanks__content {
+	text-align: center;
+	width: fit-content;
+	margin-inline: auto;
+	padding-bottom: rem(30);
+	@include mq('md') {
+		padding-bottom: rem(20);
+	}
+}
+.p-contactThanks__head {
+	font-size: rem(26);
+	font-weight: bold;
+	color: #1a1a1a;
+	margin-top: rem(36);
+	letter-spacing: 0.15em;
+	margin-top: rem(46);
+	@include mq('md') {
+		font-size: rem(32);
+		margin-top: rem(54);
+	}
+}
+.p-contactThanks__border {
+	display: inline-block;
+	width: rem(40);
+	height: rem(3);
+	background: #e0e0e0;
+	margin-top: rem(18);
+	@include mq('md') {
+		margin-top: rem(42);
+	}
+}
+.p-contactThanks__text {
+	font-size: rem(16);
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-top: rem(22);
+	@include mq('md') {
+		margin-top: rem(28);
+	}
+}

@@ -1,0 +1,52 @@
+@use 'global' as *;
+
+// .c-btn {
+// }
+.c-btn__btn {
+	display: inline-block;
+	max-width: rem(302);
+	width: 100%;
+	font-size: rem(18);
+	font-weight: bold;
+	line-height: 1.18;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #1a1a1a;
+	border: solid 3px #000;
+	cursor: pointer;
+	position: relative;
+	margin-inline: auto;
+	background: #fff;
+	letter-spacing: 0.15em;
+	@include mq('md') {
+		max-width: rem(302);
+	}
+}
+.c-btn__btn::before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	height: rem(60);
+	@include mq('md') {
+	}
+}
+.c-btn__btn::after {
+	position: absolute;
+	content: '';
+	top: 40%;
+	transform: translateY(-50%);
+	right: rem(75);
+	width: rem(13);
+	height: rem(13);
+	border-top: rem(3) solid #1a1a1a;
+	border-right: rem(3) solid #1a1a1a;
+	transform: rotate(45deg);
+	transition: all 0.5s;
+	@include mq('md') {
+	}
+}
+.c-btn__btn:hover::after {
+	animation: slideOutX 0.75s ease;
+}

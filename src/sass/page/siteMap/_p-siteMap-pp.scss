@@ -1,0 +1,18 @@
+@use 'global' as *;
+
+.p-siteMap-pp {
+	background: #e9e9e9;
+	padding: rem(52) 0 rem(116);
+	@include mq('md') {
+		padding: rem(110) 0 rem(116);
+	}
+}
+.p-siteMap-pp__content {
+	font-size: rem(16);
+	text-align: left;
+	color: #1a1a1a;
+	letter-spacing: -0.01em;
+	margin-top: rem(47);
+	@include mq('md') {
+	}
+}

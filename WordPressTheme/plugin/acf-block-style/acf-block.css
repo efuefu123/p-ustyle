@@ -1,0 +1,97 @@
+.c-btn__btn {
+	margin-inline: auto;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background: #fff;
+	border: solid 3px #000;
+	color: #1a1a1a;
+	cursor: pointer;
+	display: inline-block;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-weight: bold;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	letter-spacing: 0.15em;
+	line-height: 1.18;
+	max-width: 302px;
+	max-width: 18.875rem;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.c-btn__btn::before {
+	content: '';
+	display: inline-block;
+	height: 60px;
+	height: 3.75rem;
+	vertical-align: middle;
+}
+
+.c-btn__btn::after {
+	border-right: 3px solid #1a1a1a;
+	border-right: 0.1875rem solid #1a1a1a;
+	border-top: 3px solid #1a1a1a;
+	border-top: 0.1875rem solid #1a1a1a;
+	content: '';
+	height: 13px;
+	height: 0.8125rem;
+	position: absolute;
+	right: 75px;
+	right: 4.6875rem;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	width: 13px;
+	width: 0.8125rem;
+}
+a .c-btn__btn:hover::after {
+	-webkit-animation: slideOutX 0.75s ease;
+	animation: slideOutX 0.75s ease;
+}
+@media screen and (min-width: 768px) {
+	.c-btn__btn {
+		max-width: 18.875rem;
+	}
+}
+
+a.p-eventDetail__btn-reserve {
+	margin-inline: 0;
+	background: #ebdd21;
+	border: 0;
+	margin-top: 60px;
+	margin-top: 3.75rem;
+}
+
+a.p-eventDetail__btn-reserve::after {
+	right: 29px;
+	right: 1.8125rem;
+}
+
+a.p-eventDetail__btn-detail {
+	margin-inline: 0;
+	background: #1b1464;
+	border: 0;
+	color: #fff;
+	margin-top: 60px;
+	margin-top: 3.75rem;
+}
+
+a.p-eventDetail__btn-detail::after {
+	border-right: 3px solid #fff;
+	border-right: 0.1875rem solid #fff;
+	border-top: 3px solid #fff;
+	border-top: 0.1875rem solid #fff;
+	right: 29px;
+	right: 1.8125rem;
+}

@@ -1,0 +1,110 @@
+@use 'global' as *;
+
+.p-quality {
+	background: #ebebeb;
+}
+// .p-quality__points {
+// }
+.p-quality__semiOrder {
+	margin-top: calc(60 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(120 / 1440 * 100vw);
+	}
+}
+
+// p-quality-head
+// .p-quality__head {
+// }
+.p-quality__headContent {
+	background: #fff;
+	padding: rem(56) rem(30) 0;
+	@include mq('md') {
+		padding: rem(86) 0 0;
+	}
+}
+.p-quality__headMedia {
+	margin-top: rem(52);
+	@include mq('md') {
+		display: grid;
+		grid-template-columns: rem(430) rem(460);
+		grid-gap: 0px rem(61);
+		justify-content: center;
+		// align-items: center;
+		margin-top: rem(125);
+	}
+}
+.p-quality__headMedia-circleWrapper:nth-of-type(2) {
+	margin-inline: auto;
+	@include mq('md') {
+	}
+}
+.p-quality__headMedia-circleColumn {
+	display: contents;
+	@include mq('md') {
+		display: block;
+	}
+}
+.p-quality__headMedia-circleColumn:nth-of-type(2) {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 0px rem(6);
+	justify-content: center;
+	align-items: center;
+	margin-top: rem(-12);
+	@include mq('md') {
+		grid-gap: 0px rem(10);
+		margin-top: rem(-20);
+	}
+}
+.p-quality__headMedia-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #1b1464;
+	border-radius: 50%;
+	width: rem(128);
+	height: rem(128);
+	margin-inline: auto;
+	@include mq('md') {
+		width: rem(210);
+		height: rem(210);
+	}
+}
+.p-quality__headMedia-circleText {
+	font-size: rem(16);
+	font-weight: bold;
+	line-height: 1.38;
+	text-align: center;
+	color: #fff;
+	@include mq('md') {
+		font-size: rem(26);
+	}
+}
+.p-quality__headMedia-description {
+	width: 100%;
+	margin-top: rem(53);
+	@include mq('md') {
+		margin-top: 0;
+		padding-top: rem(16);
+	}
+}
+.p-quality__headMedia-title {
+	font-size: rem(26);
+	font-weight: bold;
+	line-height: 1.75;
+	text-align: left;
+	color: #1a1a1a;
+	@include mq('md') {
+		font-size: rem(32);
+	}
+}
+.p-quality__headMedia-text {
+	font-size: rem(16);
+	line-height: 2;
+	text-align: left;
+	color: #1a1a1a;
+	margin-top: rem(41);
+	@include mq('md') {
+		margin-top: rem(54);
+	}
+}

@@ -1,0 +1,13 @@
+@use 'global' as *;
+
+// .p-top-coutryardVoice {
+// }
+.p-top-coutryardVoice__container {
+	margin-inline: auto;
+	max-width: rem(520);
+	width: 100%;
+	height: inherit;
+	@include mq('md') {
+		max-width: rem(1440);
+	}
+}

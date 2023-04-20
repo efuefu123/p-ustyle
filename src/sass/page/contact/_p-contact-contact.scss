@@ -1,0 +1,25 @@
+@use 'global' as *;
+
+.p-contact-contact__title {
+	width: 100%;
+	background: #1b1464;
+	padding: rem(18) 0 rem(27);
+	@include mq('md') {
+		padding: rem(10) 0 rem(30);
+	}
+}
+.p-contact-contact__title > * {
+	color: #fff;
+}
+.p-contact-contact__form {
+	margin: rem(60) auto 0;
+	@include mq('md') {
+		margin-top: rem(62);
+	}
+}
+.p-contact-contact .p-contact__formItemName {
+	background: #a2a2a2;
+}
+.p-contact-contact textarea {
+	resize: none;
+}

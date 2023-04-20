@@ -1,0 +1,76 @@
+@use 'global' as *;
+
+.c-fixInfo {
+	width: 100vw;
+	position: fixed;
+	right: 0;
+	bottom: rem(10);
+	z-index: 500;
+	height: rem(43);
+	overflow: hidden; //0328
+	@include mq('md') {
+		max-width: rem(555);
+		width: 100%;
+		bottom: rem(10);
+		height: rem(62);
+	}
+}
+.c-fixInfo__item {
+	width: 100vw;
+	background: #fff;
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	align-items: center;
+	@include mq('md') {
+		max-width: rem(555);
+		width: 100%;
+	}
+}
+.c-fixInfo__category {
+	width: calc(100vw * 0.2);
+	font-size: rem(13);
+	font-weight: bold;
+	line-height: 1.75;
+	text-align: center;
+	color: #1b1464;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	// 表示崩れ防止
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	background: #ebdd21;
+	padding: rem(11) 0 rem(10);
+	@include mq('md') {
+		font-size: rem(16);
+		width: rem(120);
+		padding: rem(16) 0;
+	}
+}
+.c-fixInfo__title {
+	width: calc(100vw * 0.8);
+	// width: 100%;
+	font-size: rem(13);
+	font-weight: 500;
+	line-height: 1; //0328
+	letter-spacing: 0.01em;
+	text-align: left;
+	color: #1a1a1a;
+	background: #fff;
+	// 表示崩れ防止
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	display: flex; //0328
+	align-items: center; //0328
+	// padding: rem(11) rem(7) rem(10);
+	padding: 0 rem(7); //0328
+	@include mq('md') {
+		max-width: rem(435);
+		width: 100%;
+		font-size: rem(16);
+		// padding: rem(16) rem(12);
+		padding: 0 rem(12); //0328
+	}
+}

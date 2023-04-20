@@ -1,0 +1,57 @@
+@use 'global' as *;
+
+// fadeup
+.u-anime-fadeup {
+	opacity: 0;
+}
+.u-anime-fadeup.is-active {
+	animation-iteration-count: 1;
+	animation-name: fadeup;
+	opacity: 1;
+}
+.u-anime-fadeup1 {
+	animation-duration: 0.5s;
+}
+.u-anime-fadeup2 {
+	animation-duration: 1s;
+}
+.u-anime-fadeup3 {
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeup {
+	from {
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+	to {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// slideOut
+@keyframes slideOutX {
+	from {
+		opacity: 1;
+		transform: translateX(0) rotate(45deg);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(0.5rem) rotate(45deg);
+	}
+}
+
+// slideOut
+@keyframes slideOutX2 {
+	from {
+		opacity: 1;
+		transform: translateX(0) rotate(-135deg);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-0.5rem) rotate(-135deg);
+	}
+}

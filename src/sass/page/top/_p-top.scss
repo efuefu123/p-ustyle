@@ -1,0 +1,42 @@
+@use 'global' as *;
+
+// .p-top {
+// }
+// .p-top__fv {
+// }
+.p-top__intro {
+	margin-top: calc(62 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(110 / 1440 * 100vw);
+	}
+}
+.p-top__belt {
+	margin-top: calc(61 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(120 / 1440 * 100vw);
+	}
+}
+.p-top__works {
+	margin-top: calc(50 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(110 / 1440 * 100vw);
+	}
+}
+.p-top__coutryardVoice {
+	margin-top: calc(56 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(120 / 1440 * 100vw);
+	}
+}
+.p-top__quality {
+	margin-top: calc(66 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(120 / 1440 * 100vw);
+	}
+}
+.p-top__blog {
+	margin-top: calc(59 / 375 * 100vw);
+	@include mq('md') {
+		margin-top: calc(120 / 1440 * 100vw);
+	}
+}
